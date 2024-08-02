@@ -1,25 +1,86 @@
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Sahel','Vazir', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #242424, #000000, #252525);
+    background-size: 200% 200%;
+    animation: gradientAnimation 6s ease infinite;
+    color: #ffffff;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.container {
     text-align: center;
-    background-color: #f4f4f4;
-    color: #333;
+    opacity: 1;
+    transition: opacity 1s ease-in;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 0;
+#typing-container {
+    display: inline-block;
+    position: relative;
+    margin: 1em 0;
 }
 
-main {
-    margin: 20px;
+#typing-text {
+    font-size: 2em;
+    color: #ffffff;
+    white-space: pre;
+    display: inline-block;
+}
+
+.social-links {
+    margin-top: 1em;
+}
+
+.btn i {
+    font-size: 1.75em;
+    color: #ffffff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: rgba(0, 0, 0, 0.150);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #000000;
+    transform: scale(1.1);
 }
 
 footer {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 0;
     position: fixed;
-    width: 100%;
-    bottom: 0;
+    bottom: 10px;
+    right: 25px;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.322);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    animation: fadeIn 1s ease-in;
 }
