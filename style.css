@@ -38,10 +38,13 @@ body.fade-in {
 }
 
 #typing-text {
-    font-size: 2em;
+    font-size: 5vw;
     color: #ffffff;
-    white-space: pre;
+    white-space: nowrap;
     display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .social-links {
