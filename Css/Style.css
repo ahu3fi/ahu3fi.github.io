@@ -135,7 +135,7 @@ body {
 
 .main-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* دو ستون با عرض مساوی */
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     flex-wrap: wrap;
     gap: 20px;
@@ -145,6 +145,7 @@ body {
 
 .content-box {
     background-color: #f9f9f9;
+    font-size: 1;
     direction: rtl;
     text-align: right;
     padding: 20px;
@@ -332,6 +333,7 @@ body {
     }
 
     .content-box {
+        font-size: 0.85rem;
         flex: 0 1 100%;
     }
 
