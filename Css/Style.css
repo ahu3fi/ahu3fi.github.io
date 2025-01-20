@@ -154,7 +154,6 @@ body {
     line-height: 1.7;
     opacity: 0;
     animation: fadeIn 0.5s ease-out forwards;
-    flex: 0 1 48%;
     box-sizing: border-box;
 }
 
@@ -327,9 +326,13 @@ body {
     }
 
     .main-content {
-        display: grid;
-        flex-direction: row;
+        grid-template-columns: 1fr;
         gap: 10px;
+        padding: 20px;
+    }
+
+    .content-box:nth-child(3) {
+        grid-column: span 1;
     }
 
     .content-box {
@@ -339,58 +342,5 @@ body {
 
     .skill {
         flex: 0 1 calc(50% - 10px);
-    }
-}
-
-
-@media (max-width: 420px) {
-    body {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        padding: 10px;
-        flex-direction: column;
-    }
-
-    .profile-pic {
-        width: 100px;
-        height: 100px;
-    }
-
-    .name {
-        font-size: 1rem;
-    }
-
-    .description {
-        font-size: 0.9rem;
-    }
-
-    .social-buttons {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .social-buttons a{
-        width: 40px;
-        height: 40px;
-    }
-
-    .footer {
-        padding-top: 50px;
-        position: relative;
-        font-size: 0.7rem;
-    }
-
-    .main-content {
-        display: grid;
-        flex-direction: row;
-        gap: 10px;
-        padding: 0;
-    }
-
-    .content-box {
-        flex: 0 1 48%;
-        padding: 50px;
     }
 }
