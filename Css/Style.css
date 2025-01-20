@@ -251,7 +251,7 @@ body {
     margin-bottom: 5px;
 }
 
-.Project-Section button{
+.Project-Section button {
     font-family: 'Estedad-Medium', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     display: inline-block;
@@ -280,6 +280,9 @@ body {
     animation: fadeIn 0.5s ease-out forwards;
     flex: 0 1 48%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 
